@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementation of a basic WebAR scenario using &lt;model-viewer&gt;</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <style>
+        model-viewer
+        {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <model-viewer 
+        src="./rusty_kerosene_lamp.glb" 
+        alt="A 3D model of a kerosene lamp"
+        camera-controls 
+        touch-action="pan-y"
+        shadow-intensity="1"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        environment-image="./ferndale_studio_01_1k.hdr">
+    </model-viewer>
+</body>
+</html>
